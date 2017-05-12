@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Booklook</title>
+</head>
+<body>
+
+ 
+  <!-- 
+
+<div class="container" style="margin-top: 8%;">
+<div class="col-md-6 col-md-offset-3">     
+<div class="row">
+<div id="logo" class="text-center">
+  <div class="page-header">
+ 
+<h1>BookLook <i class="fa fa-book" aria-hidden="true"></i></h1>
+</div>
+</div>
+<div class="display"></div>
+<form class="isbn-form" role="form" id="form-buscar">
+<div class="form-group">
+<div class="input-group">
+<input id="isbn" class="form-control" type="text" name="search" placeholder="Search..." required/>
+<span class="input-group-btn">
+<button class="btn btn-primary search-isbn" type="submit">
+<i class="glyphicon glyphicon-search" aria-hidden="true"></i> Search
+</button>
+</span>
+</div>
+</div>
+</div>
+</form>
+</div>            
+</div>
+</div>
+  -->
+
+<br/>
+<br/>
+<br/>
+
+<form class="form" action="#">
+ <h1>BookLook <i class="fa fa-book" aria-hidden="true"></i></h1>
+<div>
+  <br/>
+
+ <div class="display"></div>
+ </div>
+ <br/>
+
+  <div class="searchBox-fakeInput">
+    <div class="searchBox-inputWrapper searchBox-inputWrapper_bordered">
+      <input id="isbn" name="search" type="text" class="form-control searchBox-input js-searchBox-input" placeholder="Which book are you looking for?">
+    </div>
+
+    <div class="searchBox-clearWrapper">
+      <span>
+        <button class="btn btn-primary search-isbn" type="submit">GO <i class="glyphicon glyphicon-ok-sign"></i></button>
+      </span>
+    </div>
+
+  </div>
+</form>
+
+
+
+
+
+   <script id="store-template" type="text/x-handlebars-template">
+   {{#each items}}
+   <img src='{{volumeInfo.imageLinks.smallThumbnail}}'/>
+   
+   <h1>{{volumeInfo.title}}</h1>
+   <br><h3>{{volumeInfo.authors}}</h3>
+   <br><p>{{volumeInfo.description}}</p>
+   {{/each}}
+ </script>
+
+ <script src="node_modules/jquery/dist/jquery.min.js"> </script>
+ <script src="node_modules/handlebars/dist/handlebars.min.js"> </script>
+ <script src="script.js"></script>
+ 
+
+</body>
+</html>
